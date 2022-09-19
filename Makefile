@@ -1,0 +1,33 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <time.h>
+#include "asmdef.h"
+
+// Declaring that assembly function is provided elsewhere
+//extern int asm_function(int a, int b);
+	
+
+// This should be the C equivalent to the assembly implementation
+int c_function(int a, int b){
+	int c;
+    c = a + b;
+    return c;
+}
+
+int add(int a, int b){
+    int c;
+    c = a + b;
+    return c;
+}
+
+int main(){
+    int a = 10;
+    int b = 6;
+    int sum;
+    sum = asm_function(a , b);
+	printf("Sum = %d\n", sum);
+    return 0;
+}
